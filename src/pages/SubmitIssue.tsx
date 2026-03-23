@@ -140,7 +140,7 @@ const SubmitIssue = () => {
               <Label htmlFor="location">Location / Room</Label>
               <Input
                 id="location"
-                placeholder="e.g. Floor 3, Room 301"
+                placeholder="e.g. Floor 2, Room M45"
                 value={form.location}
                 onChange={(e) => setForm({ ...form, location: e.target.value })}
                 className="mt-1.5"
