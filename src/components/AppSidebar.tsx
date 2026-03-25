@@ -75,10 +75,10 @@ export const AppSidebar = () => {
         {!collapsed && (
           <div className="mb-3 flex items-center gap-3 rounded-lg bg-sidebar-accent/50 px-3 py-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sidebar-primary text-xs font-bold text-sidebar-primary-foreground">
-              SJ
+              JM
             </div>
             <div className="min-w-0">
-              <p className="truncate text-xs font-medium text-sidebar-accent-foreground">Sarah Johnson</p>
+              <p className="truncate text-xs font-medium text-sidebar-accent-foreground">Johanna Mekwa</p>
               <p className="truncate text-[10px] text-sidebar-muted">Administrator</p>
             </div>
           </div>

@@ -25,11 +25,11 @@ const SettingsPage = () => {
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <Label>Organization Name</Label>
-            <Input defaultValue="Acme Properties" className="mt-1.5" />
+            <Input defaultValue="The Innovation Hub" className="mt-1.5" />
           </div>
           <div>
             <Label>Support Email</Label>
-            <Input defaultValue="support@acmeprops.com" className="mt-1.5" />
+            <Input defaultValue="support@innovationhub.com" className="mt-1.5" />
           </div>
         </div>
       </div>
