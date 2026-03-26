@@ -1,73 +1,114 @@
-# React + TypeScript + Vite
+# 📊 TIH Helpdesk Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 A modern, full-stack Helpdesk Dashboard and Ticketing System designed for efficient facility management and issue tracking. Built with **React 19**, **Node.js**, and **MySQL**, it provides a streamlined experience for both reporters and administrators.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+-   **🔍 Issue Tracking**: Comprehensive list of all reported tickets with advanced filtering and search.
+-   **📝 Streamlined Submission**: Easy-to-use form for reporting issues with category, priority, building, and location details.
+-   **📈 Real-time Analytics**: Visual data representations of helpdesk performance, ticket status, and trends using Recharts.
+-   **📋 Kanban Task Board**: Intuitive drag-and-drop style interface for managing ticket progress.
+-   **📱 Responsive Design**: Fully responsive UI built with Tailwind CSS and Radix UI primitives.
+-   **🔒 Secure Authentication**: Robust security using JWT and bcrypt for user authentication.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+-   **Core**: React 19, TypeScript, Vite
+-   **Styling**: Tailwind CSS (v4), Lucide React (Icons)
+-   **UI Components**: Radix UI, Shadcn/UI (Primitives)
+-   **State Management**: TanStack Query (React Query)
+-   **Visualizations**: Recharts
+-   **Navigation**: React Router 7
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Backend
+-   **Runtime**: Node.js
+-   **Framework**: Express.js
+-   **Database**: MySQL (mysql2)
+-   **Security**: JSON Web Token (JWT), bcryptjs
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+### Prerequisites
+
+-   Node.js (v18 or higher)
+-   MySQL Server
+-   npm or yarn
+
+### Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/JaspaSoftware/TIH_Helpdesk_dashboard.git
+    cd TIH_Helpdesk_dashboard
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Variables**:
+    Create a `.env` file in the root directory and configure your database and server settings:
+    ```env
+    DB_HOST=localhost
+    DB_PORT=3306
+    DB_USER=root
+    DB_PASSWORD=your_mysql_password
+    DB_NAME=helpdesk_db
+    PORT=5000
+    JWT_SECRET=your_jwt_secret
+    FRONTEND_URL=http://localhost:5173
+    ```
+
+4.  **Database Setup**:
+    Initialize your MySQL database using the provided schema (if available) or create the necessary tables for tickets, users, categories, and buildings.
+
+### Running the Application
+
+1.  **Start the Backend Server**:
+    ```bash
+    node server.js
+    ```
+
+2.  **Start the Frontend Dev Server**:
+    ```bash
+    npm run dev
+    ```
+
+The application will be accessible at `http://localhost:5173`.
+
+---
+
+## 📁 Project Structure
+
+```text
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Application pages (Dashboard, Issues, etc.)
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utility functions and configurations
+│   ├── types/          # TypeScript type definitions
+│   └── App.tsx         # Main application entry and routing
+├── config/             # Backend configurations (Database)
+├── server.js           # Express server entry point
+└── tailwind.config.ts  # Tailwind CSS configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🤝 Contributing
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the ISC License.
