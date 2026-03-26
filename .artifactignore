@@ -1,0 +1,36 @@
+# Exclude node_modules from the deployment artifact
+# Azure App Service will run npm install automatically
+node_modules/
+
+# Exclude source code (handled by the build process)
+src/
+public/
+*.ts
+*.tsx
+tsconfig*.json
+eslint.config.js
+postcss.config.js
+tailwind.config.ts
+vite.config.ts
+
+# Exclude git and other dev tools
+.git/
+.github/
+.gitignore
+.env
+README.md
+task.md
+implementation_plan.md
+walkthrough.md
+gh_action_fix_plan.md
+deployment_fix_plan.md
+new_readme.md
+components.json
+
+# Keep these for production
+# dist/ (built frontend)
+# server.js (backend)
+# package.json
+# package-lock.json
+# web.config
+# config/ (database connection)
