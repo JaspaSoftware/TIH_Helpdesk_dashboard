@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-const db = require('./config/database');
+const db = require('./config/database.cjs');
 
 const app = express();
 
